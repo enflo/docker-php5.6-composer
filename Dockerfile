@@ -10,7 +10,7 @@ ENV COMPOSER_MEMORY_LIMIT=-1
 #RUN curl -sS https://getcomposer.org/installer | php \
 #  && mv composer.phar /usr/local/bin/composer
 
-COPY ./deploy/Docker/composer-installer.sh /tmp
+COPY ./composer-installer.sh /tmp
 RUN cd /tmp && chmod 777 composer-installer.sh && ./composer-installer.sh
 
 RUN composer --version
